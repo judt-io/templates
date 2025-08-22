@@ -1,0 +1,3 @@
+# Robots file tells what cralwers should be allowed to access. Default is to allow all!
+User-agent: *
+Allow: /

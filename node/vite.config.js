@@ -6,16 +6,14 @@ import path from 'node:path'
 const isSSR = process.env.BUILD_SSR === 'true'
 
 export default defineConfig({
+
   plugins: [react(), tailwindcss()],
-  preview: {
-    port: 3551,
-    host: true,
-  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  publicDir: 'public',
   build: isSSR ? {
     // SSR build configuration
     ssr: 'src/entry-server.jsx',
